@@ -6,7 +6,14 @@
 
     <main>
       <div class="container">
-        <router-view/>
+        <div class="row">
+          <grid-vue tamanho="4">
+            Menu
+          </grid-vue>
+          <grid-vue tamanho="8">
+            <router-view/>
+          </grid-vue>
+        </div>
       </div>
     </main>
 
@@ -23,12 +30,14 @@
 <script>
 import NavBar from '@/components/layouts/NavBar'
 import FooterVue from '@/components/layouts/FooterVue'
+import GridVue from '@/components/layouts/GridVue'
 
 export default {
   name: 'app',
   components:{
     NavBar,
-    FooterVue
+    FooterVue,
+    GridVue
   }
 }
 </script>
